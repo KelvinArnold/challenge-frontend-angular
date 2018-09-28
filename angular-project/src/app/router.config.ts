@@ -4,7 +4,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { ChannelsComponent } from './components/channels/channels.component';
 
 export const appRoutes: Routes = [
-  { path: 'home', 
+  { path: '', 
     component: HomeComponent
   },
   {
