@@ -1,0 +1,6 @@
+<div class="show bgc-black tc-white p-2"
+  [id]="id_block" *ngIf="config"
+  [ngStyle]="{'top.px': getTop(), 'height.px': getHeight()}">
+  <strong>{{config.titulo}}</strong>
+  <p>{{getTime(config.dh_inicio)}} - {{getTime(config.dh_fim)}}</p>
+</div>

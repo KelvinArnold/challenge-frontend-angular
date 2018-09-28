@@ -1,0 +1,11 @@
+.card-product {
+  min-height: 360px;
+}
+.card-product-container {
+  border-radius: 2px;
+  border: 1px solid grey;
+  height: 100%;
+}
+.card-product-content {
+  height: 100%;
+}

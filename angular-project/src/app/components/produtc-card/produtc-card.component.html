@@ -1,0 +1,54 @@
+<div class="card-product">
+  <div class="card-product-container w-100 pl-3 pr-3 pt-3 pb-3">
+    <div class="d-flex flex-column justify-content-between card-product-content">
+      <div class="w-100 card-product-top">
+        <header>
+          <div class="title d-flex w-100 align-items-center">
+            <h5 class="tc-primary">{{product.nome}}</h5>
+          </div>
+          <p v-if="config.descricao">{{product.descricao}}</p>
+        </header>
+        <!-- Tv List -->
+        <div class="tv-list mb-2 d-flex flex-wrap">
+          <app-tv-item
+            *ngFor="let channel of product.listaCanais; index as i"
+            [channel]="channel"
+            [id]="i"
+            class="col-12 col-sm-3 col-md-6">
+          </app-tv-item>
+        </div>
+      </div>
+      <div class="w-100 card-product-bottom">
+        <!-- Price -->
+        <div *ngIf="product.preco && product.preco < product.precoDe; else elseBlock">
+          <small class="tc-grey">
+            <strong class="mr-1">De:</strong>
+            {{formatNumber(product.precoDe)}}
+          </small>
+          <h5 class="tc-primary mb-1">
+            <strong class="mr-1">Por:</strong>
+            {{formatNumber(product.preco)}}
+          </h5>
+        </div>
+        <ng-template #elseBlock>
+          <h5 class="tc-primary mb-1">
+            <strong class="mr-1">Por:</strong>
+            {{formatNumber(product.precoDe)}}
+          </h5>
+        </ng-template>
+        <!-- Others -->
+        <p *ngIf="product.adesao">
+          <strong>Adesão:</strong>
+          {{formatNumber(product.adesao)}}
+        </p>
+        <p>
+          <strong>Instalação:</strong>
+          {{product.taxaInstalacao ? formatNumber(product.taxaInstalacao) : 'Gratis'}}
+        </p>
+        <p class="btn bgc-primary mt-2 tc-white btn-block text-uppercase font-weigth-bold">
+          <strong>{{product.tipo + ' ' + product.id}}</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

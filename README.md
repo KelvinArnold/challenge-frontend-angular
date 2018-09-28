@@ -5,6 +5,15 @@ Claro Brasil Challenge - Front-end Angular
 
 O objetivo deste desafio é avaliar a competência técnica dos candidatos a desenvolvedor front-end angular na **Claro Brasil**. Será solicitado o desenvolvimento de um Webapp que te ajuda a contratar um dos produtos da Claro Brasil.
 
+## Anotacões Kelvin Arnold
+
+Neste Projeto utilizei o Vue e Angular, separados em projetos distintos:
+
+	- vue-project
+	- angular-project
+
+Cada projeto têm seu propio README.md com as instruções necessárias para executá-los.
+
 
 ## Passo a passo
 

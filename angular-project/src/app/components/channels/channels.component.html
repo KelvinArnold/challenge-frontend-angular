@@ -1,0 +1,31 @@
+<div class="clr-view-shows" *ngIf="programation.length">
+  <!-- Header -->
+  <div class="col-xs-12 pl-2 pr-2 mb-3">
+    <h5 class="font-weight-bold">
+      Shows da
+      <span class="tc-primary">Claro</span></h5>
+    <p class="mt-2 mb-2">Confira todos os programas de nossos canais de TV!</p>
+  </div>
+  <div class="d-flex flex-row">
+    <!-- Hour -->
+    <app-tv-hours
+      class="clr-hour bgc-light pl-2 pr-2"
+      [hours]="hours">
+    </app-tv-hours>
+    <!-- Shows -->
+    <div class="clr-shows d-flex flex-row">
+      <div class="clr-shows-columns col-12 col-sm-6 col-lg-3 p-0"
+        *ngFor="let ch of channels">
+        <div class="channels text-center bgc-primary tc-white">
+          <strong>Canal {{ch}}</strong>
+        </div>
+        <app-tv-show
+          *ngFor="let show of programation | programationByChannels:ch; index as i"
+          [id]="i"
+          [config]="show"
+          [position]="getShowPosition(show)">
+        </app-tv-show>
+      </div>
+    </div>
+  </div>
+</div>

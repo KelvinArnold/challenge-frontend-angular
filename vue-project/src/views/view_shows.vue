@@ -46,8 +46,7 @@ export default {
   name: 'views_shows',
   data() {
     return {
-      cell_hour: CELL_HOUR,
-      current_channel: 526,
+      cell_hour: CELL_HOUR
     }
   },
   components: {

@@ -1,0 +1,17 @@
+.clr {
+  &-hour {
+    width: 40px;
+  }
+  &-shows {
+    width: calc(100% - 40px);
+    &-columns {
+      border-right: 1px solid #f2f5f8;
+      overflow: hidden;
+      position: relative;
+      .channels {
+        height: 40px;
+        line-height: 40px;
+      }
+    }
+  }
+}

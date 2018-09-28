@@ -1,0 +1,13 @@
+.card {
+  &-product {
+    height: 360px;
+    &-container {
+      border-radius: 2px;
+      border: 1px solid rgba($color: #808a9c, $alpha: .4);
+      height: 100%;
+    }
+    &-content {
+      height: 100%;
+    }
+  }
+}

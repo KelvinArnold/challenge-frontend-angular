@@ -1,0 +1,7 @@
+<ul class="list-hours" ref="hourslist" *ngIf="hours">
+  <li></li>
+  <li *ngFor="let h of hours"
+    class="d-flex align-items-center justify-content-center">
+    <span>{{h}}</span>
+  </li>
+</ul>
