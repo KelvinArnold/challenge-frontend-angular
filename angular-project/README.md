@@ -11,7 +11,7 @@ yarn install
 ```
 yarn start
 ```
-Navigate to `http://localhost:4200/home
+Navigate to http://localhost:4200/
 
 ### Compiles and minifies for production
 ```

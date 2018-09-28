@@ -9,7 +9,7 @@ yarn install
 ```
 yarn start
 ```
-Navigate to `http://localhost:8080/`.
+Navigate to http://localhost:8080/.
 
 ### Compiles and minifies for production
 ```
